@@ -2,42 +2,44 @@ download:
 https://www.qt.io/offline-installers
 http://download.qt.io/archive/
 
-½éÉÜ¼°ÊÊÓÃ³¡¾°
+ä»‹ç»åŠé€‚ç”¨åœºæ™¯
 https://blog.csdn.net/rl529014/article/details/51344881
 
-ÓÅµã£º
-¿çÆ½Ì¨¡¢·â×°ºÃ
-È±µã£º
-ÎªÁË¿çÆ½Ì¨¿¼ÂÇËğÊ§ÁË²¿·ÖĞÔÄÜ£¬ÖØµãĞèÒªÑéÖ¤socketÔÚ¸ß²¢·¢Ê±QtµÄĞÔÄÜÎÊÌâ£¬¿¼ÂÇÊÇ·ñĞèÒª½«²¿·Ö¹¦ÄÜ×ªÎªnative±à³Ì
-ÒÆ¶¯¶ËµÄĞÔÄÜÎÊÌâ£¬ºóÆÚĞèÒªÖØµãÑéÖ¤
+ä¼˜ç‚¹ï¼š
+è·¨å¹³å°ã€å°è£…å¥½
+ç¼ºç‚¹ï¼š
+ä¸ºäº†è·¨å¹³å°è€ƒè™‘æŸå¤±äº†éƒ¨åˆ†æ€§èƒ½ï¼Œé‡ç‚¹éœ€è¦éªŒè¯socketåœ¨é«˜å¹¶å‘æ—¶Qtçš„æ€§èƒ½é—®é¢˜ï¼Œè€ƒè™‘æ˜¯å¦éœ€è¦å°†éƒ¨åˆ†åŠŸèƒ½è½¬ä¸ºnativeç¼–ç¨‹
+ç§»åŠ¨ç«¯çš„æ€§èƒ½é—®é¢˜ï¼ŒåæœŸéœ€è¦é‡ç‚¹éªŒè¯
 
-qt¿ò¼Ü
-qt¿ò¼ÜµÄ´óÖÂË¼Â·
+qtæ¡†æ¶
+qtæ¡†æ¶çš„å¤§è‡´æ€è·¯
 https://blog.csdn.net/amwha/article/details/73928281
 
 qmake:
-ÏÈÉú³É.pro¹¤³ÌÎÄ¼ş£¬È»ºóÓÉ.proÎÄ¼şÉú³ÉMakefileÎÄ¼ş
+å…ˆç”Ÿæˆ.proå·¥ç¨‹æ–‡ä»¶ï¼Œç„¶åç”±.proæ–‡ä»¶ç”ŸæˆMakefileæ–‡ä»¶
 https://blog.csdn.net/lvdepeng123/article/details/79007988
 https://blog.csdn.net/cqltbe131421/article/details/54579890
-1¡¢qmakeÉú³ÉconsoleÓ¦ÓÃÅäÖÃ
+1ã€qmakeç”Ÿæˆconsoleåº”ç”¨é…ç½®
 qmake -project CONFIG=console
 qmake
 nmake
-2¡¢qmakeÉú³ÉwindowsÓ¦ÓÃÅäÖÃ
+2ã€qmakeç”Ÿæˆwindowsåº”ç”¨é…ç½®
 qmake -project CONFIG=windows
 qmake
 nmake
 
-vc»·¾³£º
+vcç¯å¢ƒï¼š
 cl, nmake
-ÃüÁîĞĞÏÂÅäÖÃ»·¾³¿ÉÏÈÔËĞĞvcvars32.bat
+å‘½ä»¤è¡Œä¸‹é…ç½®ç¯å¢ƒå¯å…ˆè¿è¡Œvcvars32.bat
 
-qtÔ´Âë
+qtæºç 
 
 
-qt½Ì³Ì
+qtæ•™ç¨‹
 https://blog.csdn.net/mars_xiaolei/article/details/79424315
 
+qt under macbook
+install xcode first
 
 
 
