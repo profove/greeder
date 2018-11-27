@@ -1,0 +1,47 @@
+download:
+https://www.qt.io/offline-installers
+http://download.qt.io/archive/
+
+介绍及适用场景
+https://blog.csdn.net/rl529014/article/details/51344881
+
+优点：
+跨平台、封装好
+缺点：
+为了跨平台考虑损失了部分性能，重点需要验证socket在高并发时Qt的性能问题，考虑是否需要将部分功能转为native编程
+移动端的性能问题，后期需要重点验证
+
+qt框架
+qt框架的大致思路
+https://blog.csdn.net/amwha/article/details/73928281
+
+qmake:
+先生成.pro工程文件，然后由.pro文件生成Makefile文件
+https://blog.csdn.net/lvdepeng123/article/details/79007988
+https://blog.csdn.net/cqltbe131421/article/details/54579890
+1、qmake生成console应用配置
+qmake -project CONFIG=console
+qmake
+nmake
+2、qmake生成windows应用配置
+qmake -project CONFIG=windows
+qmake
+nmake
+
+vc环境：
+cl, nmake
+命令行下配置环境可先运行vcvars32.bat
+
+qt源码
+
+
+qt教程
+https://blog.csdn.net/mars_xiaolei/article/details/79424315
+
+
+
+
+
+
+
+
