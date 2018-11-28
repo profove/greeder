@@ -44,6 +44,12 @@ install xcode first
 qt 5 api doc:
 http://doc.qt.io/qt-5/classes.html
 
+qt network programming:
+https://blog.csdn.net/y____xiang/article/details/80398913
+
+qt多线程编程：
+https://www.cnblogs.com/senior-engineer/p/6185814.html
+
 
 
 
