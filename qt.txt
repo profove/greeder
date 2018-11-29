@@ -36,7 +36,7 @@ qt源码
 
 
 qt教程
-https://blog.csdn.net/mars_xiaolei/article/details/79424315
+http://www.qter.org/thread-629-1-1.html
 
 qt under macbook
 install xcode first
@@ -46,9 +46,21 @@ http://doc.qt.io/qt-5/classes.html
 
 qt network programming:
 https://blog.csdn.net/y____xiang/article/details/80398913
+套接字连接前先做如下设置：
+m_socket->setProxy(QNetworkProxy::NoProxy);
 
 qt多线程编程：
 https://www.cnblogs.com/senior-engineer/p/6185814.html
+
+qt中文显示问题：
+QT中还有2个概念非常重要：
+1、源码字符集(the source character set)	源码文件是使用何种编码保存的
+2、执行字符集(the execution character set)	可执行程序内保存的是何种编码(程序执行时内存中字符串编码)
+Qt5假定的执行字符集是UTF8，不再允许用户擅自改动。这样一来，Qt4中setCodecXXX的各种副作用不再存在，而且中文问题更为简单
+QString::fromUtf8("这是汉字");//在源代码为UTF8时使用
+QString::fromLocal8Bit("这是汉字")//在本地编码转为UTF8时使用
+建议采用下面的宏解决办法：
+#define TR(str)   (QString::fromLocal8Bit(str))  //解决中文乱码
 
 
 
