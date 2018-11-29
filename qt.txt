@@ -62,7 +62,8 @@ QString::fromLocal8Bit("这是汉字")//在本地编码转为UTF8时使用
 建议采用下面的宏解决办法：
 #define TR(str)   (QString::fromLocal8Bit(str))  //解决中文乱码
 
-
+qt信号槽：
+qt4语法的信号槽检查是在运行期，qt5的语法在编译期检查
 
 
 
