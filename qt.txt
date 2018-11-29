@@ -65,6 +65,9 @@ QString::fromLocal8Bit("这是汉字")//在本地编码转为UTF8时使用
 qt信号槽：
 qt4语法的信号槽检查是在运行期，qt5的语法在编译期检查
 
+qt对象状态调试：
+可以使用 QObject::dumpObjectTree() 和 QObject::dumpObjectInfo() 这两个函数进行这方面的调试。
+在 Qt 中，尽量在构造的时候就指定 parent 对象，并且大胆在堆上创建
 
 
 
