@@ -73,16 +73,32 @@ qtcreator快捷键
 https://blog.csdn.net/desert187/article/details/23996821
 
 faq：
-在QMainWindow内直接添加Layout行不通
+1、在QMainWindow内直接添加Layout行不通
 因为这个窗口类中，已经有了一个Layout对象了，这时候，当你再setLayout的时候，就是无效的，这是有三个办法，一个办法是调用layout()方法，返回这个窗口内部的Layout的对象，然后删除它，再调用setLayout设置自己的Layout对象，还有一个办法，就是直接使用这个窗口内部的Layout对象，第三个方法，就是直接创建其子窗口，在这个子窗口中使用Layout对象，如，在QMainWindow中，我们通常创建一个继承于QWidget的窗口对象，然后调用setCentralWidget方法来安装这个窗口，然后在这个窗口中使用自己的Layout。
 QWidget* widget = new QWidget(this);
 widget->setLayout(gridLayout);
 this->setCentralWidget(widget);
 
-QWidget的子类调用show()方法不能显示：
+2、QWidget的子类调用show()方法不能显示：
 “Non-window widgets are child widgets, displayed within their parent widgets.”，就是“非窗口的部件是子部件，显示在它们的父部件中”
 解决方法：一开始我把继承的父类从QWidget改成QDialog，发现没有什么问题。不过在原来的类的基础上，加入setWindowFlags(Qt::Window)这句到它的构造函数里面就行了，让它以窗口显示，这样改动就很小了。
 
+3、经常发现使用qt自带类的返回字符串会导致程序异常
+如果需要使用到返回字符串的，先拷贝出来再使用，自带类返回的是临时对象
+
+*****************************************************************************************************************************************************
+qt常用类说明
+1、QString
+转换字符串使用导致异常问题，样例如下：
+QString str = "string";
+const char* c = str.toStdString().c_str()单步调试显示的结果可能会是'\0'
+而按照如下写法：
+std::string s = str.toStdString(); 
+const char* c = s.c_str();
+c是"string"
+由于str.toStdString().c_str()中toStdString()是一个临时std::string变量，而c_str()是指向这个临时std::string变量的字符串地址，所以传给c时这个临时std::string变量已经被析构，其内容是空，c_str()自然就是'\0'。不过这种情况在分步使用的情况下才会发生，一般使用可以直接写QString::toStdString().c_str()也可以。
 
 
 
+
+*****************************************************************************************************************************************************
